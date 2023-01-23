@@ -2,8 +2,10 @@ import React from "react";
 
 function AddEvent() {
 
-    return 
+    return (
         // Samuel add form here
+        <p>Form</p>
+    )
     
 }
 
