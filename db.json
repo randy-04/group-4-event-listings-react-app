@@ -3,7 +3,7 @@
         {
             "id":1,
             "name":"Blue ice launch",
-            "image":"./images/drinkingparty.jpg",
+            "image":"./images/clubing.jpg",
             "location":"Westlands",
             "date":"12-3-2023",
             "time":"2:00pm",
@@ -57,7 +57,7 @@
         {
             "id":7,
             "name":"Tech is the Future",
-            "image":"./images/tech-is-the-future.jpg",
+            "image":"./images/technology.jpg",
             "location":"Sarit centre",
             "date":"20-3-2023",
             "time":"7:00am",
@@ -121,7 +121,7 @@
             "id":14,
             "name":"Art expo",
             "image":"./images/art-gallery.jpg",
-            "location":"Banjuka Square",
+            "location":"Banjukah Square",
             "date":"4-3-2023",
             "time":"2:30pm",
             "willAttend":"false"
@@ -138,17 +138,44 @@
         {
             "id":16,
             "name":"Indian festival",
-            "image":"./images/indian-wedding.jpg",
+            "image":"./images/indian-festival.jpg",
             "location":"shwini Hall",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
         },
         {
-            "id":16,
-            "name":"Indian festive",
-            "image":"./images/indian-wedding.jpg",
-            "location":"shwini Hall",
+            "id":17,
+            "name":"Motor Sport",
+            "image":"./images/motor-sport.jpg",
+            "location":"One Republic",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":18,
+            "name":"The Wedding Show",
+            "image":"./images/wedding.jpg",
+            "location":"Pompei Gardens",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":19,
+            "name":"All you can eat Buffet",
+            "image":"./images/buffet.jpg",
+            "location":"Sarova Diana Hotel",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":29,
+            "name":"Meat 'n' grill",
+            "image":"./images/meat-grill.jpg",
+            "location":"Hot Kitchen",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
