@@ -143,6 +143,15 @@
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
+        },
+        {
+            "id":16,
+            "name":"Indian festive",
+            "image":"./images/indian-wedding.jpg",
+            "location":"shwini Hall",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
         }
     ]
     
