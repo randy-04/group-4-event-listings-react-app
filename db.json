@@ -4,7 +4,9 @@
             "id":1,
             "name":"Blue ice launch",
             "image":"./images/clubing.jpg",
+            "description":"",
             "location":"Westlands",
+            "price":"",
             "date":"12-3-2023",
             "time":"2:00pm",
             "willAttend":"false"
@@ -14,6 +16,8 @@
             "name":"leopards vs Gorilla derby",
             "image":"./images/derby.jpg",
             "location":"Bahati Stadium",
+            "description":"",
+            "price":"",
             "date":"11-3-2023",
             "time":"9:10am",
             "willAttend":"false"
@@ -23,6 +27,8 @@
             "name":"One with nature",
             "image":"./images/paradise-gardens.jpg",
             "location":"Paradise Gardens",
+            "description":"",
+            "price":"",
             "date":"8-3-2023",
             "time":"11:30am",
             "willAttend":"false"
@@ -32,6 +38,8 @@
             "name":"Sophomore Party",
             "image":"./images/sophomore.jpg",
             "location":"Maasai lounge",
+            "description":"",
+            "price":"",
             "date":"13-3-2023",
             "time":"8:15pm",
             "willAttend":"false"
@@ -41,6 +49,8 @@
             "name":"Chill hangouts",
             "image":"./images/splash-party.jpg",
             "location":"Hurlingam",
+            "description":"",
+            "price":"",
             "date":"30-3-2023",
             "time":"9:45pm",
             "willAttend":"false"
@@ -50,6 +60,8 @@
             "name":"ibiza waters",
             "image":"./images/pool-party.jpg",
             "location":"Burudani Square",
+            "description":"",
+            "price":"",
             "date":"5-3-2023",
             "time":"5:00pm",
             "willAttend":"false"
@@ -59,6 +71,8 @@
             "name":"Tech is the Future",
             "image":"./images/technology.jpg",
             "location":"Sarit centre",
+            "description":"",
+            "price":"",
             "date":"20-3-2023",
             "time":"7:00am",
             "willAttend":"false"
@@ -68,6 +82,8 @@
             "name":"The Tomorrow People",
             "image":"./images/youth-seminar.jpg",
             "location":"Kasarani Stadium",
+            "description":"",
+            "price":"",
             "date":"21-3-2023",
             "time":"2:45pm",
             "willAttend":"false"
@@ -77,6 +93,8 @@
             "name":"Fashion Week",
             "image":"./images/fashion-week.jpg",
             "location":"Jamuhuri street",
+            "description":"",
+            "price":"",
             "date":"27-3-2023",
             "time":"3:50pm",
             "willAttend":"false"
@@ -86,6 +104,8 @@
             "name":"Big Boy Party",
             "image":"./images/senior-party.jpg",
             "location":"Gazibo Lounge",
+            "description":"",
+            "price":"",
             "date":"19-3-2023",
             "time":"6:00pm",
             "willAttend":"false"
@@ -95,6 +115,8 @@
             "name":"Heaven Rain",
             "image":"./images/christian-fellowship.jpg",
             "location":"Kingdom Seeker",
+            "description":"",
+            "price":"",
             "date":"15-3-2023",
             "time":"8:00am",
             "willAttend":"false"
@@ -104,6 +126,8 @@
             "name":"The Straight Path",
             "image":"./images/happy-ijuma.jpg",
             "location":"Masjid Al-Noor",
+            "description":"",
+            "price":"",
             "date":"25-3-2023",
             "time":"12:30pm",
             "willAttend":"false"
@@ -113,6 +137,8 @@
             "name":"Women In Fashion",
             "image":"./images/women-fahion.jpg",
             "location":"Galito's Plaza",
+            "description":"",
+            "price":"",
             "date":"22-3-2023",
             "time":"1:30pm",
             "willAttend":"false"
@@ -122,6 +148,8 @@
             "name":"Art expo",
             "image":"./images/art-gallery.jpg",
             "location":"Banjukah Square",
+            "description":"",
+            "price":"",
             "date":"4-3-2023",
             "time":"2:30pm",
             "willAttend":"false"
@@ -131,6 +159,8 @@
             "name":"Cyclists Life Matter",
             "image":"./images/cycling-awareness.jpg",
             "location":"Mambo Mengi Road",
+            "description":"",
+            "price":"",
             "date":"10-3-2023",
             "time":"8:00am",
             "willAttend":"false"
@@ -140,6 +170,8 @@
             "name":"Indian festival",
             "image":"./images/indian-festival.jpg",
             "location":"shwini Hall",
+            "description":"",
+            "price":"",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
@@ -149,6 +181,8 @@
             "name":"Motor Sport",
             "image":"./images/motor-sport.jpg",
             "location":"One Republic",
+            "description":"",
+            "price":"",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
@@ -158,6 +192,8 @@
             "name":"The Wedding Show",
             "image":"./images/wedding.jpg",
             "location":"Pompei Gardens",
+            "description":"",
+            "price":"",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
@@ -167,6 +203,8 @@
             "name":"All you can eat Buffet",
             "image":"./images/buffet.jpg",
             "location":"Sarova Diana Hotel",
+            "description":"",
+            "price":"",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
@@ -176,6 +214,8 @@
             "name":"Meat 'n' grill",
             "image":"./images/meat-grill.jpg",
             "location":"Hot Kitchen",
+            "description":"",
+            "price":"",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
