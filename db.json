@@ -3,7 +3,7 @@
         {
             "id":1,
             "name":"Blue ice launch",
-            "image":"./images/drinkingparty.jpg",
+            "image":"./images/clubing.jpg",
             "location":"Westlands",
             "date":"12-3-2023",
             "time":"2:00pm",
@@ -57,7 +57,7 @@
         {
             "id":7,
             "name":"Tech is the Future",
-            "image":"./images/tech-is-the-future.jpg",
+            "image":"./images/technology.jpg",
             "location":"Sarit centre",
             "date":"20-3-2023",
             "time":"7:00am",
@@ -138,16 +138,7 @@
         {
             "id":16,
             "name":"Indian festival",
-            "image":"./images/indian-wedding.jpg",
-            "location":"shwini Hall",
-            "date":"14-3-2023",
-            "time":"7:00am",
-            "willAttend":"false"
-        },
-        {
-            "id":16,
-            "name":"Indian festive",
-            "image":"./images/indian-wedding.jpg",
+            "image":"./images/indian-festival.jpg",
             "location":"shwini Hall",
             "date":"14-3-2023",
             "time":"7:00am",
