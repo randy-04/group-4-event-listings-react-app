@@ -17,8 +17,8 @@ function EventsPage() {
             </Alert>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/addevent" element={<AddEvent />} />
                 <Route path="/eventspage" element={<EventsPage />} />
+                <Route path="/addevent" element={<AddEvent />} />
 
             </Routes>
         </Fragment>
