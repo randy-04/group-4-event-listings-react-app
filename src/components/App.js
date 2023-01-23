@@ -1,5 +1,6 @@
 import logo from '../logo.svg';
 import '../App.css';
+import EventsPage from './EventsPage';
 
 import React from 'react'
 import { Button } from 'semantic-ui-react'
@@ -7,7 +8,7 @@ import { Button } from 'semantic-ui-react'
 function App() {
   return (
     <div className="App">
-      <button class="ui button">Click Here</button>
+      <EventsPage />
     </div>
   );
 }
