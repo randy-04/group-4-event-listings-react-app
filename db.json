@@ -1,0 +1,158 @@
+{
+    "Events":[
+        {
+            "id":1,
+            "name":"Blue ice launch",
+            "image":"./images/drinkingparty.jpg",
+            "location":"Westlands",
+            "date":"12-3-2023",
+            "time":"2:00pm",
+            "willAttend":"false"
+        },
+        {
+            "id":2,
+            "name":"leopards vs Gorilla derby",
+            "image":"./images/derby.jpg",
+            "location":"Bahati Stadium",
+            "date":"11-3-2023",
+            "time":"9:10am",
+            "willAttend":"false"
+        },
+        {
+            "id":3,
+            "name":"One with nature",
+            "image":"./images/paradise-gardens.jpg",
+            "location":"Paradise Gardens",
+            "date":"8-3-2023",
+            "time":"11:30am",
+            "willAttend":"false"
+        },
+        {
+            "id":4,
+            "name":"Sophomore Party",
+            "image":"./images/sophomore.jpg",
+            "location":"Maasai lounge",
+            "date":"13-3-2023",
+            "time":"8:15pm",
+            "willAttend":"false"
+        },
+        {
+            "id":5,
+            "name":"Chill hangouts",
+            "image":"./images/splash-party.jpg",
+            "location":"Hurlingam",
+            "date":"30-3-2023",
+            "time":"9:45pm",
+            "willAttend":"false"
+        },
+        {
+            "id":6,
+            "name":"ibiza waters",
+            "image":"./images/pool-party.jpg",
+            "location":"Burudani Square",
+            "date":"5-3-2023",
+            "time":"5:00pm",
+            "willAttend":"false"
+        },
+        {
+            "id":7,
+            "name":"Tech is the Future",
+            "image":"./images/tech-is-the-future.jpg",
+            "location":"Sarit centre",
+            "date":"20-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":8,
+            "name":"The Tomorrow People",
+            "image":"./images/youth-seminar.jpg",
+            "location":"Kasarani Stadium",
+            "date":"21-3-2023",
+            "time":"2:45pm",
+            "willAttend":"false"
+        },
+        {
+            "id":9,
+            "name":"Fashion Week",
+            "image":"./images/fashion-week.jpg",
+            "location":"Jamuhuri street",
+            "date":"27-3-2023",
+            "time":"3:50pm",
+            "willAttend":"false"
+        },
+        {
+            "id":10,
+            "name":"Big Boy Party",
+            "image":"./images/senior-party.jpg",
+            "location":"Gazibo Lounge",
+            "date":"19-3-2023",
+            "time":"6:00pm",
+            "willAttend":"false"
+        },
+        {
+            "id":11,
+            "name":"Heaven Rain",
+            "image":"./images/christian-fellowship.jpg",
+            "location":"Kingdom Seeker",
+            "date":"15-3-2023",
+            "time":"8:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":12,
+            "name":"The Straight Path",
+            "image":"./images/happy-ijuma.jpg",
+            "location":"Masjid Al-Noor",
+            "date":"25-3-2023",
+            "time":"12:30pm",
+            "willAttend":"false"
+        },
+        {
+            "id":13,
+            "name":"Women In Fashion",
+            "image":"./images/women-fahion.jpg",
+            "location":"Galito's Plaza",
+            "date":"22-3-2023",
+            "time":"1:30pm",
+            "willAttend":"false"
+        },
+        {
+            "id":14,
+            "name":"Art expo",
+            "image":"./images/art-gallery.jpg",
+            "location":"Banjuka Square",
+            "date":"4-3-2023",
+            "time":"2:30pm",
+            "willAttend":"false"
+        },
+        {
+            "id":15,
+            "name":"Cyclists Life Matter",
+            "image":"./images/cycling-awareness.jpg",
+            "location":"Mambo Mengi Road",
+            "date":"10-3-2023",
+            "time":"8:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":16,
+            "name":"Indian festival",
+            "image":"./images/indian-wedding.jpg",
+            "location":"shwini Hall",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":16,
+            "name":"Indian festive",
+            "image":"./images/indian-wedding.jpg",
+            "location":"shwini Hall",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        }
+    ]
+    
+    } 
