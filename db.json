@@ -121,7 +121,7 @@
             "id":14,
             "name":"Art expo",
             "image":"./images/art-gallery.jpg",
-            "location":"Banjuka Square",
+            "location":"Banjukah Square",
             "date":"4-3-2023",
             "time":"2:30pm",
             "willAttend":"false"
@@ -140,6 +140,42 @@
             "name":"Indian festival",
             "image":"./images/indian-festival.jpg",
             "location":"shwini Hall",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":17,
+            "name":"Motor Sport",
+            "image":"./images/motor-sport.jpg",
+            "location":"One Republic",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":18,
+            "name":"The Wedding Show",
+            "image":"./images/wedding.jpg",
+            "location":"Pompei Gardens",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":19,
+            "name":"All you can eat Buffet",
+            "image":"./images/buffet.jpg",
+            "location":"Sarova Diana Hotel",
+            "date":"14-3-2023",
+            "time":"7:00am",
+            "willAttend":"false"
+        },
+        {
+            "id":29,
+            "name":"Meat 'n' grill",
+            "image":"./images/meat-grill.jpg",
+            "location":"Hot Kitchen",
             "date":"14-3-2023",
             "time":"7:00am",
             "willAttend":"false"
