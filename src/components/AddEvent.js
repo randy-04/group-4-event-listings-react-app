@@ -10,6 +10,11 @@ function AddEvent() {
         time:"",
         price:""
     })
+
+    function handleChange (){
+        setEvent({...DataTransfer,[e.target.name]:e.target.value,})
+        console.log(data)
+    }
   
     return (
         // Samuel add form here
@@ -19,12 +24,12 @@ function AddEvent() {
          <form className="align-items-centre">
             <div className="col-sm-6 offset-sm-3 d-flex justify-content-center">
                 <br/>
-                <input className="form-control " type="text" placeholder="name" /> <br />
-                <input className="form-control" type="text" placeholder="location" /> <br />
-                <input className="form-control" type="text" placeholder="description" /> <br />
-                <input className="form-control" type="text" placeholder="time" /> <br />
-                <input className="form-control" type="numeric" placeholder="price" /> <br />
-                <input className="form-control" type="date" placeholder="date" /> <br />
+                <input className="form-control " type="text" name="name" placeholder="name" /> <br />
+                <input className="form-control" type="text" name="location" placeholder="location" /> <br />
+                <input className="form-control" type="text" name="description" placeholder="description" /> <br />
+                <input className="form-control" type="text" name="time" placeholder="time" /> <br />
+                <input className="form-control" type="numeric" name="price" placeholder="price" /> <br />
+                <input className="form-control" type="date" name="date" placeholder="date" /> <br />
             </div>
         </form>
             
