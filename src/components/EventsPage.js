@@ -5,12 +5,18 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import AddEvent from "./AddEvent";
 import EachEvent from "./EachEvent";
+import { SearchResult } from "semantic-ui-react";
+import SearchResults from "./SearchResults";
 
 
 
 function EventsPage() {
     // create state for holding the events
     const [events, setEvents] = useState([]);
+
+    // create state for holding search 
+    // because this is a parent compoonent to Each event and Search
+    const [searchResults, setSearchResults] = useState("");
 
     // useEffect to fetch events from the server
 
@@ -21,12 +27,24 @@ function EventsPage() {
         .then((eventsData) => setEvents(() => eventsData));
     }, [])
 
-    // variable to loop through and list events
-    const eventsList = events.map((event) => {
-        return (
-            <EachEvent key={event.id} event={event} />
-        )
-    })
+    // when there is an event, it will be filtered to find a match from the search results based on the name event
+    let oneEvent= "";
+    if(events) {
+        let matchedEvent = events.filter((event) =>{
+            return (
+                event.name.toLowerCase().includes(searchResults.toLowerCase()) ||
+                event.description.toLowerCase().includes(searchResults.toLowerCase())
+            )
+        })
+
+        // variable to loop through the searched/non-searched events and list them
+        oneEvent = matchedEvent.map((event) => {
+            return (
+                <EachEvent key={event.id} event={event}/>
+            )
+        })
+    }
+    
     return (
         <Fragment>
 
@@ -38,7 +56,7 @@ function EventsPage() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/eventsavailable" element={<Fragment>
-
+                    <SearchResults events={events} searchResults={searchResults} setSearchResults={setSearchResults} />
                         <div className="ui three column grid container" style={{
                             
                             display: 'flex',
@@ -46,13 +64,14 @@ function EventsPage() {
                             alignItems: 'center' 
                             }}>
                             <div className="row">
-                                {eventsList}
+                                {oneEvent}
                             </div>
                         </div>
                     </Fragment> } />
                 <Route path="/addevent" element={<AddEvent />} />
 
             </Routes>
+            
         </Fragment>
     )
 }

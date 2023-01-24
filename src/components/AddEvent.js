@@ -12,9 +12,9 @@ function AddEvent() {
         price:""
     })
 
-    function handleChange (){
+    function handleChange (e){
         setEvent({...DataTransfer,[e.target.name]:e.target.value,})
-        console.log(data)
+        // console.log(data)
     }
   
     return (
