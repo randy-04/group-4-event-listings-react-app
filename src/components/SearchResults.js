@@ -16,6 +16,7 @@ function SearchResults({ searchResults, setSearchResults }) {
                     type="text"
                     placeholder='Search Events...'
                     onChange={onSearch}
+                    // value is set to the user's search input, to be put in searchResults state
                     value={searchResults}
                 />
                 <i className="search icon"></i>

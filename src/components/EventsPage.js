@@ -18,6 +18,9 @@ function EventsPage() {
     // because this is a parent compoonent to Each event and Search
     const [searchResults, setSearchResults] = useState("");
 
+    // useState for filter parameters
+    const [filterType, setFilterType] = useState(["All"]);
+
     // useEffect to fetch events from the server
 
     useEffect(() => {
