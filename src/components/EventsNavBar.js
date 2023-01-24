@@ -1,15 +1,18 @@
 import { Fragment } from "react";
-import Nav from 'react-bootstrap/Nav';
+import { Nav, Navbar } from 'react-bootstrap';
 
 function EventsNavBar() {
 
     return (
-        <Nav defaultActiveKey="/home" className="flex-column" variant="pills">
+        <Fragment>
+        {/* className="flex-column"  */}
+        <Nav defaultActiveKey="/home" variant="pills"> 
           <Nav.Link href="/home">EventsHub</Nav.Link>
-          <Nav.Link href="/eventspage">Events Page</Nav.Link>
+          <Nav.Link eventKey="link-1" href="/eventsavailable">Events Page</Nav.Link>
           <Nav.Link href="/addevent">Add Event</Nav.Link>
           
         </Nav>
+        </Fragment>
       );
 }
 
