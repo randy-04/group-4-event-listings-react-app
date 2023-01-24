@@ -20,11 +20,14 @@ This app will allow users to browse through a list of events nearby,view the det
 3. To add a new event to the list, click on the "add new listing" tab on the home page. this will direct you to a page where tou can list your event.
 4. Search for events by location in the search bar.
 
-
+## Technologies
+1.HTML
+4.BOOTSTRAP
+5.REACT
 
 
 ## Author
 [][url]
 
-
+## License
 
