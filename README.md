@@ -41,15 +41,22 @@ git@github.com:randy-04/group-4-event-listings-react-app.git
 5. The delete button in the event card deletes the event for good from the server.
 
 
+
+## Technologies
+1.HTML
+4.BOOTSTRAP
+5.REACT
+=======
 ## Authors
 - [@Samuel Kuria](https://github.com/samuelkuria01)
 - [@Sophia Ndalo](https://github.com/sophie-ndalo)
 - [@Randy Kipkurui](https://github.com/randy-04)
 
 
+
 ## License
 
 [MIT](https://github.com/randy-04/group-4-event-listings-react-app/blob/main/LICENSE.md)
 
-
+## License
 
