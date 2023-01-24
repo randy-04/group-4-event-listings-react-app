@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function AddEvent() {
+    // event state
     const [Event,setEvent] = useState({
         nameof:"",
         location:"",
@@ -12,7 +13,7 @@ function AddEvent() {
     })
   
     return (
-        // Samuel add form here
+        
         <div>
             <label>Add Event</label>
             <div>

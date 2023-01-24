@@ -19,7 +19,7 @@ function EventsPage() {
         .then((response) => response.json())
         // using async method to add events
         .then((eventsData) => setEvents(() => eventsData));
-    })
+    }, [])
 
     // variable to loop through and list events
     const eventsList = events.map((event) => {
