@@ -11,27 +11,29 @@ const heading = {
 }
 
 function AddEvent() {
-    const [eventData,setEventdata] = useState("");
-    const [name,setName] = useState("")
-    const [location,setLocation] = useState("");
-    const [description,setDescription] = useState("");
-    const [date,setDate] = useState("");
-    const [time,setTime] = useState("");
-    const [price,setPrice] = useState("");
+    const [eventData,setEventdata] = useState({
+        name: "",
+        location:"",
+        description:"",
+        time:"",
+        price:"",
+        date:""
+    });
+   
 
 
     function handleChange(e){
-        setEventdata({
-            ...eventData,[e.target.name]:e.target.value,
-        },)
+        const newData = {...eventData}
+        newData[e.target.id] = e.target.value
+        setEventdata(newData)
         console.log(eventData)
     }
+    
 
     function addEvent(e){
+        const newData = {...eventData}
         e.preventDefault();
-        const newData = {name,location,description,date,time,price}
 
-        // console.log(newData)
         fetch(" http://localhost:3500/Events",{
             method:"POST",
             headers:{
@@ -40,8 +42,7 @@ function AddEvent() {
             body: JSON.stringify(newData)
         },[])
         .then((res)=>{
-            console.log(newData)
-        })
+            console.log(res.json)})
         .catch((e)=> console.log(e))
     }
   
@@ -54,23 +55,23 @@ function AddEvent() {
          <form  className="col-sm-6 offset-sm-3">
             <div className="col-sm-6 offset-sm-3">
                 <br/>
-                <input onChange={(e)=> setName(e.target.value)} className="form-control " 
-                type="text" name="name" value={name} placeholder="name" /> <br />
+                <input onChange={(e)=> handleChange(e)} className="form-control " 
+                type="text" id="name" value={eventData.name} placeholder="name" /> <br />
                 
-                <input onChange={(e)=> setLocation(e.target.value)} className="form-control" 
-                type="text" name="location" value={location} placeholder="location" /> <br />
+                <input onChange={(e)=> handleChange(e)}  className="form-control" 
+                type="text" id="location" value={eventData.location} placeholder="location" /> <br />
                 
-                <input onChange={(e)=> setDescription(e.target.value)}className="form-control w-1/2 p-1" 
-                type="text" name="description" value={description} placeholder="description" /> <br />
+                <input onChange={(e)=> handleChange(e)} className="form-control w-1/2 p-1" 
+                type="text" id="description" value={eventData.description} placeholder="description" /> <br />
                 
-                <input onChange={(e)=> setTime(e.target.value)} className="form-control" 
-                type="text" name="time" value={time} placeholder="time" /> <br />
+                <input onChange={(e)=> handleChange(e)} className="form-control" 
+                type="text" id="time" value={eventData.time} placeholder="time" /> <br />
                
-                <input onChange={(e)=> setPrice(e.target.value)} className="form-control" 
-                type="numeric" name="price" value={price} placeholder="price" /> <br />
+                <input onChange={(e)=> handleChange(e)} className="form-control" 
+                type="numeric" id="price" value={eventData.price} placeholder="price" /> <br />
                 
-                <input onChange={(e)=> setDate(e.target.value)}  className="form-control" 
-                type="date" name="date" value={date} placeholder="date" /> <br />
+                <input onChange={(e)=> handleChange(e)}   className="form-control" 
+                type="date" id="date" value={eventData.date} placeholder="date" /> <br />
                
                 <button onClick={addEvent} type="submit" className="btn btn-primary">Add Event</button>
             </div>
