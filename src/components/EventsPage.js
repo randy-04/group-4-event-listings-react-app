@@ -39,7 +39,12 @@ function EventsPage() {
                 <Route path="/" element={<Home />} />
                 <Route path="/eventsavailable" element={<Fragment>
 
-                        <div className="ui four column grid" style={{marginLeft: "20px" }}>
+                        <div className="ui three column grid container" style={{
+                            
+                            display: 'flex',
+                            justifyContent: 'space-between', 
+                            alignItems: 'center' 
+                            }}>
                             <div className="row">
                                 {eventsList}
                             </div>

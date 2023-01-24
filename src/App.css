@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.money-bill:hover {
+  color: #147792;
+}
