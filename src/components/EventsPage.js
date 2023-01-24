@@ -7,6 +7,7 @@ import AddEvent from "./AddEvent";
 import EachEvent from "./EachEvent";
 import { SearchResult } from "semantic-ui-react";
 import SearchResults from "./SearchResults";
+import FilterType from "./FilterType";
 
 
 
@@ -18,8 +19,11 @@ function EventsPage() {
     // because this is a parent compoonent to Each event and Search
     const [searchResults, setSearchResults] = useState("");
 
+    // state to hold search parameters for each event
+    const [searchParam] = useState(["description", "name", "date", "price"]);
+
     // useState for filter parameters
-    const [filterType, setFilterType] = useState(["All"]);
+    const [filterParam, setFilterParam] = useState(["All"]);
 
     // useEffect to fetch events from the server
 
@@ -32,21 +36,40 @@ function EventsPage() {
 
     // when there is an event, it will be filtered to find a match from the search results based on the name event
     let oneEvent= "";
-    if(events) {
-        let matchedEvent = events.filter((event) =>{
-            return (
-                event.name.toLowerCase().includes(searchResults.toLowerCase()) ||
-                event.description.toLowerCase().includes(searchResults.toLowerCase())
-            )
-        })
+ 
+    // function to handle both search results and filtered results
+    function search(events) {
+        return events.filter((event) => {
+            if (event.willAttend === filterParam) { 
+                return searchParam.some((newEvent) => {
+                    return (
+                        event[newEvent]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(searchResults.toLowerCase()) > -1
+                    );
+                });
+            } else if (filterParam == "All") {
+                return searchParam.some((newEvent) => {
+                    return (
+                        event[newEvent]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(searchResults.toLowerCase()) > -1
+                    );
+                });
+            }
+        });
+    }
 
+        let evData = Object.values(events);
         // variable to loop through the searched/non-searched events and list them
-        oneEvent = matchedEvent.map((event) => {
+        oneEvent = search(evData).map((event) => {
             return (
                 <EachEvent key={event.id} event={event}/>
             )
         })
-    }
+    //}
     
     return (
         <Fragment>
@@ -59,7 +82,15 @@ function EventsPage() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/eventsavailable" element={<Fragment>
-                    <SearchResults events={events} searchResults={searchResults} setSearchResults={setSearchResults} />
+                    <div className="wrapper" style={{
+                        display: "flex",
+                        justifyContent: 'space-between', 
+                        alignItems: 'center' 
+                        }}>
+                        <SearchResults searchResults={searchResults} setSearchResults={setSearchResults} />
+                        <FilterType filterParam={filterParam} setFilterParam={setFilterParam} />
+                    </div>
+                    <br />
                         <div className="ui three column grid container" style={{
                             
                             display: 'flex',
