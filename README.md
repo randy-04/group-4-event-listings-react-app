@@ -28,6 +28,9 @@ git@github.com:randy-04/group-4-event-listings-react-app.git
 ```
 - Your browser should open up automatically. If not, click the link you will be provided.
 
+## Technologies
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
 
 ## User Journey
 1. On opening the app,the home page will load with two tabs "Events page" and "add event". 
