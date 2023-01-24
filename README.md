@@ -28,6 +28,7 @@ git@github.com:randy-04/group-4-event-listings-react-app.git
 ```
 - Your browser should open up automatically. If not, click the link you will be provided.
 
+
 ## User Journey
 1. On opening the app,the home page will load with two tabs "Events page" and "add event". 
 2. On clicking the "Events page" tab, a list of events Will appear with an image and details on the event, each with a delete and attend button, none of which is selected at first.

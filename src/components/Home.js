@@ -5,7 +5,7 @@ function Home() {
 
 
     return(
-     <>
+     
      <section style={{backgroundSize: 'cover'}}>
         <div className="leftBox" style={{ backgroundColor: 'pink', height: '100%', width: '40%'}}>
           <h1 style={{ textAlign:'center'}}>EVENTS AND SHOWS</h1>
@@ -15,7 +15,7 @@ function Home() {
         <div className="content">
        </div>
        </section>
-       </>
+       
     )
 
     
