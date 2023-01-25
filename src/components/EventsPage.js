@@ -8,6 +8,7 @@ import EachEvent from "./EachEvent";
 import { SearchResult } from "semantic-ui-react";
 import SearchResults from "./SearchResults";
 import FilterType from "./FilterType";
+import RSVPFilter from "./RSVPFilter";
 
 
 
@@ -25,8 +26,10 @@ function EventsPage() {
     // useState for filter parameters
     const [filterParam, setFilterParam] = useState(["All"]);
 
-    // useEffect to fetch events from the server
+    // useState for willAttend filter parameter
+    const [attendFilter, setAttendFilter] = useState(["All"]);
 
+    // useEffect to fetch events from the server
     useEffect(() => {
         fetch("http://localhost:3000/Events")
         .then((response) => response.json())
@@ -40,7 +43,9 @@ function EventsPage() {
     // function to handle both search results and filtered results
     function search(events) {
         return events.filter((event) => {
+            // filter by type
             if (event.type === filterParam) { 
+                // default search based on parameters
                 return searchParam.some((newEvent) => {
                     return (
                         event[newEvent]
@@ -58,7 +63,27 @@ function EventsPage() {
                             .indexOf(searchResults.toLowerCase()) > -1
                     );
                 });
-            }
+                
+            } 
+            // if (event.willAttend == attendFilter) {
+            //     return searchParam.some((newEvent) => {
+            //         return (
+            //             event[newEvent]
+            //                 .toString()
+            //                 .toLowerCase()
+            //                 .indexOf(searchResults.toLowerCase()) > -1
+            //         );
+            //     });
+            // } else if (attendFilter == "All") {
+            //     return searchParam.some((newEvent) => {
+            //         return (
+            //             event[newEvent]
+            //                 .toString()
+            //                 .toLowerCase()
+            //                 .indexOf(searchResults.toLowerCase()) > -1
+            //         );
+            //     });
+            // }
         });
     }
 
@@ -89,6 +114,7 @@ function EventsPage() {
                         }}>
                             {/* components handling search and filters */}
                         <SearchResults searchResults={searchResults} setSearchResults={setSearchResults} />
+                        {/* <RSVPFilter attendFilter={attendFilter} setAttendFilter={setAttendFilter} /> */}
                         <FilterType filterParam={filterParam} setFilterParam={setFilterParam} />
                     </div>
                     <br />

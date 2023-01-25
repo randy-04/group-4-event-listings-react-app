@@ -10,7 +10,7 @@
             "price":"$50",
             "date":"12-3-2023",
             "time":"2:00pm",
-            "willAttend":"false"
+            "willAttend":true
         },
         {
             "id":2,
@@ -22,7 +22,7 @@
             "price":"$27",
             "date":"11-2-2023",
             "time":"9:10am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":3,
@@ -34,7 +34,7 @@
             "price":"$30",
             "date":"8-9-2023",
             "time":"11:30am",
-            "willAttend":"false"
+            "willAttend":true
         },
         {
             "id":4,
@@ -46,7 +46,7 @@
             "price":"$25",
             "date":"13-7-2023",
             "time":"8:15pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":5,
@@ -58,7 +58,7 @@
             "price":"$30",
             "date":"30-4-2023",
             "time":"9:45pm",
-            "willAttend":"false"
+            "willAttend":true
         },
         {
             "id":6,
@@ -70,7 +70,7 @@
             "price":"$40",
             "date":"5-3-2023",
             "time":"5:00pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":7,
@@ -82,7 +82,7 @@
             "price":"$0",
             "date":"20-3-2023",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":8,
@@ -94,7 +94,7 @@
             "price":"$20",
             "date":"21-2-2023",
             "time":"2:45pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":9,
@@ -106,7 +106,7 @@
             "price":"$50",
             "date":"15-4-2023",
             "time":"3:50pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":10,
@@ -118,7 +118,7 @@
             "price":"$60",
             "date":"19-5-2023",
             "time":"6:00pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":11,
@@ -130,7 +130,7 @@
             "price":"$0",
             "date":"15-3-2023",
             "time":"8:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":12,
@@ -142,7 +142,7 @@
             "price":"$0",
             "date":"25-3-2023",
             "time":"12:30pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":13,
@@ -154,7 +154,7 @@
             "price":"$30",
             "date":"14-2-2023",
             "time":"1:30pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":14,
@@ -166,7 +166,7 @@
             "price":"$40",
             "date":"4-3-2023",
             "time":"2:30pm",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":15,
@@ -178,7 +178,7 @@
             "price":"$10",
             "date":"10-3-2023",
             "time":"8:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":16,
@@ -190,7 +190,7 @@
             "price":"$20",
             "date":"1-6-2024",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":17,
@@ -202,7 +202,7 @@
             "price":"$50",
             "date":"30-1-2023",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":18,
@@ -214,7 +214,7 @@
             "price":"$35",
             "date":"14-7-2023",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":19,
@@ -226,7 +226,7 @@
             "price":"$60",
             "date":"14-6-2023",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         },
         {
             "id":29,
@@ -238,7 +238,7 @@
             "price":"$80",
             "date":"14-2-2023",
             "time":"7:00am",
-            "willAttend":"false"
+            "willAttend":false
         }
     ]
     

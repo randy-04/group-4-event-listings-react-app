@@ -13,6 +13,7 @@ function FilterType({ filterParam, setFilterParam }) {
                 // new value of selection becomes the filterParam
                 onChange={(e) => {
                     setFilterParam(e.target.value);
+                    console.log(e.target.value);
                 }}
             >
                 <option value="All">Filter by Type of Event</option>
