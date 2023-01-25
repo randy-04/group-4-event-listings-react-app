@@ -1,6 +1,6 @@
 import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
-function EachEvent({ event }) {
+function EachEvent({ event, onUpdateEvent }) {
     // destructuring the event prop for easier access
     const {id, name, image, location, date, time, price, willAttend, description} = event;
 
@@ -16,6 +16,24 @@ function EachEvent({ event }) {
         }
       };
 
+      // styling for button when clicked      
+      const background = willAttend ? "rgb(255 38 16)" : null;
+      const color = willAttend ? "#000000" : null;
+
+      // function to handle update of willAttend
+      function updateAttend() {
+        fetch(`http://localhost:3000/Events/${id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            willAttend: !willAttend
+          }),
+        })
+        .then((r) => r.json())
+        .then((updatedEv) => onUpdateEvent(updatedEv))
+      }
 
     
     return (
@@ -47,7 +65,14 @@ function EachEvent({ event }) {
             <Card.Content extra>
             <a>
                 
-                <Button primary><Icon name='time' />Attend</Button>
+                <Button primary style={{
+                  color: color,
+                  background: background
+                }}
+                onClick={updateAttend}
+                >
+                  <Icon name={willAttend ? 'paper plane outline' : 'time'} />{willAttend ? "RSVP'd" : "Attend"}
+                  </Button>
                 <Button secondary onClick={handleDelete}><Icon name='delete calendar' />Delete</Button>
             </a>
             </Card.Content>

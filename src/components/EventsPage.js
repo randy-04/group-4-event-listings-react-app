@@ -87,14 +87,24 @@ function EventsPage() {
         });
     }
 
+        // function to update willAttend value to reflect on DOM
+        function updateAttend(updatedEvent) {
+            const updatedEvents = events.map((event) => {
+                if (event.id === updatedEvent.id) {
+                    return updatedEvent;
+                } else return event;
+            });
+            setEvents(updatedEvents);
+        }
+
         let evData = Object.values(events);
         // variable to loop through the searched/non-searched events and list them
         oneEvent = search(evData).map((event) => {
             return (
-                <EachEvent key={event.id} event={event}/>
+                <EachEvent key={event.id} event={event} onUpdateEvent={updateAttend}/>
             )
         })
-    //}
+    
     
     // function to add event to the page immediately after POST
         function handleAddEvent(newEvent) {

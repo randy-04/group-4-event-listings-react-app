@@ -40,3 +40,8 @@
 .money-bill:hover {
   color: #147792;
 }
+
+Button .rsvp {
+  background-color: "#ff1801";
+  color: "#000000";
+}
