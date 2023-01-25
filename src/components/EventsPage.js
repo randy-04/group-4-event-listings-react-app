@@ -65,7 +65,7 @@ function EventsPage() {
                 });
                 
             } 
-            // if (event.willAttend == attendFilter) {
+            //else if (event.willAttend == attendFilter) {
             //     return searchParam.some((newEvent) => {
             //         return (
             //             event[newEvent]
@@ -96,6 +96,12 @@ function EventsPage() {
         })
     //}
     
+    // function to add event to the page immediately after POST
+        function handleAddEvent(newEvent) {
+            console.log(newEvent)
+            setEvents([...events, newEvent])
+        }
+
     return (
         <Fragment>
 
@@ -129,7 +135,7 @@ function EventsPage() {
                             </div>
                         </div>
                     </Fragment> } />
-                <Route path="/addevent" element={<AddEvent />} />
+                <Route path="/addevent" element={<AddEvent onAdd={handleAddEvent}/>} />
 
             </Routes>
             
