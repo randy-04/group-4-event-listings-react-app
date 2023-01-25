@@ -1,20 +1,16 @@
 import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
-function EachEvent({ event, onUpdateEvent }) {
+function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
     // destructuring the event prop for easier access
     const {id, name, image, location, date, time, price, willAttend, description} = event;
 
-    const handleDelete = async (eventId) => {
-        try {
-          const response = await fetch(`http://localhost:3000/Events/${eventId}`, {
-            method: "DELETE",
-          });
-          const data = await response.json();
-          return data;
-        } catch (error) {
-          console.error(error);
-        }
-      };
+    function handleDelete() {
+      fetch(`http://localhost:3000/Events/${id}`, {
+        method: 'DELETE',
+      })
+      .then((r)=>r.json())
+      .then(() => onDeleteEvent(event))
+    }
 
       // styling for button when clicked      
       const background = willAttend ? "rgb(255 38 16)" : null;

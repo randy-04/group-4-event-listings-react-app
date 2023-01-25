@@ -10,7 +10,7 @@
       "price": "$50",
       "date": "12-3-2023",
       "time": "2:00pm",
-      "willAttend": true
+      "willAttend": false
     },
     {
       "id": 2,
@@ -58,7 +58,7 @@
       "price": "$30",
       "date": "30-4-2023",
       "time": "9:45pm",
-      "willAttend": true
+      "willAttend": false
     },
     {
       "id": 6,
@@ -154,7 +154,7 @@
       "price": "$30",
       "date": "14-2-2023",
       "time": "1:30pm",
-      "willAttend": false
+      "willAttend": true
     },
     {
       "id": 14,
@@ -299,6 +299,18 @@
       "time": "16:50",
       "willAttend": false,
       "id": 34
+    },
+    {
+      "name": "NextLevel Fashion Show",
+      "image": "https://images.unsplash.com/photo-1521722776011-39ec91e0c14b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb24lMjBzaG93fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "location": "Online Event",
+      "description": "Showcasing local fashion masterclass.",
+      "type": "Fashion",
+      "price": "$20",
+      "date": "2023-02-06",
+      "time": "19:15",
+      "willAttend": false,
+      "id": 35
     }
   ]
 }
