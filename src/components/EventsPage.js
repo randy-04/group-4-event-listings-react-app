@@ -20,7 +20,7 @@ function EventsPage() {
     const [searchResults, setSearchResults] = useState("");
 
     // state to hold search parameters for each event
-    const [searchParam] = useState(["description", "name", "date", "price"]);
+    const [searchParam] = useState(["description", "name", "date", "price", "location", "time"]);
 
     // useState for filter parameters
     const [filterParam, setFilterParam] = useState(["All"]);
@@ -40,7 +40,7 @@ function EventsPage() {
     // function to handle both search results and filtered results
     function search(events) {
         return events.filter((event) => {
-            if (event.willAttend === filterParam) { 
+            if (event.type === filterParam) { 
                 return searchParam.some((newEvent) => {
                     return (
                         event[newEvent]
@@ -87,6 +87,7 @@ function EventsPage() {
                         justifyContent: 'space-between', 
                         alignItems: 'center' 
                         }}>
+                            {/* components handling search and filters */}
                         <SearchResults searchResults={searchResults} setSearchResults={setSearchResults} />
                         <FilterType filterParam={filterParam} setFilterParam={setFilterParam} />
                     </div>

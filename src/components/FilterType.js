@@ -16,8 +16,15 @@ function FilterType({ filterParam, setFilterParam }) {
                 }}
             >
                 <option value="All">Filter by Type of Event</option>
-                <option value="true">true</option>
-                <option value="false">false</option>
+                <option value="Sherehe">Sherehe</option>
+                <option value="Food">Food</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Romance">Romance</option>
+                <option value="Education">Education</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Religious">Religious</option>
+                <option value="Art">Art</option>
+                <option value="Sports">Sports</option>
                 
             </Form.Select>
         </Fragment>
