@@ -34,7 +34,7 @@ git@github.com:randy-04/group-4-event-listings-react-app.git
 2. On clicking the "Events page" tab, a list of events Will appear with an image and details on the event, each with a delete and attend button, none of which is selected at first.
 2. Click the "ATTEND" button to attend an event.
 3. To add a new event to the list, click on the "add event" tab on the home page. This will direct you to a page with a form where you can list your event.
-4. Search for events by location in the search bar.
+4. Search for events by event's name and description in the search bar.
 5. The delete button in the event card deletes the event for good from the server.
 
 
