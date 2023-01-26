@@ -58,7 +58,7 @@
       "price": "$30",
       "date": "30-4-2023",
       "time": "9:45pm",
-      "willAttend": false
+      "willAttend": true
     },
     {
       "id": 6,
