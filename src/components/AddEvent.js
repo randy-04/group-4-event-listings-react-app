@@ -136,7 +136,7 @@ function AddEvent({onAdd}) {
                     <div class="col">
                     <label>
                     Description:
-                    <textarea onChange={(e)=> handleChange(e)} className="form-control w-1/2 p-1" 
+                    <textarea onChange={(e)=> handleChange(e)} className={AddEventStyle.form1}
                     type="text" name="description" value={eventData.description} placeholder="description" /> 
                 </label> <br />
                      </div>
@@ -149,6 +149,7 @@ function AddEvent({onAdd}) {
                         style={{width: "100%"}}
                         name="type"
                         value={eventData.type}
+                        className={AddEventStyle.form1}
                         
                         aria-label="Default select example"
                         
