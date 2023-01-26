@@ -126,11 +126,11 @@ function EventsPage() {
     return (
         <Fragment>
 
-            <EventsNavBar />
-            <Alert variant="dark">
+           
+            <Alert style={{ background: "black"}}>
                 Welcome to EventHub! Go to the Events Page to see what we have for You 🥳
             </Alert>
-
+            <EventsNavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/eventsavailable" element={<Fragment>
