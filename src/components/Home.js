@@ -4,7 +4,7 @@ import React from "react";
 function Home() {
  return(
      <section>
-        <div className="leftBox" style={{ backgroundColor: 'pink', height: '30%', width: '40%',position: "absolute", marginTop: "2%", marginLeft: "2%"}}>
+        <div className="leftBox" style={{  height: '30%', width: '40%',position: "absolute", marginTop: "2%", marginLeft: "2%"}}>
           <h1 style={{ textAlign:'center',fontSize: '4rem', fontStyle: "italic"}}>FindEvents HuB</h1>
           <p style={{ width: '100%', height: '30%', display: 'block', textAlign:"center", fontSize: '2rem' }}>"Your vision.Our innovation: Event solutions"</p>
            </div>
