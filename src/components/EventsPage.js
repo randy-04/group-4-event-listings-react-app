@@ -33,6 +33,7 @@ function EventsPage() {
     // useState for pagination
     const [paginate, setPaginate] = useState(8);
 
+    
 
     // load more button styling
     const loadBtn = {
@@ -118,6 +119,44 @@ function EventsPage() {
             window.scrollTo(0, 0);
           }
 
+        
+        function sortEvents() {
+            // let eventsSort = events.slice().sort((a, b) => {
+            //     console.log(a) 
+            //     return new Date(b.date) - new Date(a.date)})
+                
+            let eventsSort = events.slice().sort((a, b) => {
+                const timeA = (new Date(a.date)).getTime()
+                const timeB = (new Date(b.date)).getTime()
+
+                if(timeA > timeB) return -1;
+                else if(timeA < timeB) return 1;
+                else return 0;
+            })
+
+            setEvents(eventsSort)
+
+            // let eventsCopy;
+
+            // eventsCopy = [...events].sort((a, b) => {
+            //     const timeA = (new Date(a.date)).getTime()
+            //     console.log(timeA.toString);
+            //     const timeB = (new Date(b.date)).getTime()
+
+            //     if(timeA> timeB){
+            //         return .date
+            //     }else if(timeA < timeB){
+            //         return sortStrategy.date * -1
+            //     }else {
+            //         return 0
+            //     }
+            // })
+            
+            console.log(eventsSort);
+            console.log(events);
+            
+        }
+
     return (
         <Fragment>
 
@@ -137,8 +176,10 @@ function EventsPage() {
                         }}>
                             {/* components handling search and filters */}
                         <SearchResults searchResults={searchResults} setSearchResults={setSearchResults} />
-                        {/* <RSVPFilter attendFilter={attendFilter} setAttendFilter={setAttendFilter} /> */}
-                        <SortDate />
+                        <button onClick={sortEvents}>
+                            Sort by Date
+                        </button>
+                        {/* <SortDate events={events} setEvents={setEvents} strategy={updateSortStrategy} sortStrategy={sortStrategy} /> */}
                         <FilterType filterParam={filter} setFilterParam={setFilter} filter_items={filter_items}/>
                     </div>
                     <br />

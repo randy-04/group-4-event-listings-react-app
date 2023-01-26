@@ -18,7 +18,7 @@ function FilterType({ filterParam, setFilterParam, filter_items }) {
             >
                 <option value="">Filter by Type of Event</option>
                 {filter_items.map((item) => (
-                        <option value={item}>Filter By {item}</option>
+                        <option value={item}>{item}</option>
                 ))}
                 {/* <option value="Sherehe">Sherehe</option>
                 <option value="Food">Food</option>

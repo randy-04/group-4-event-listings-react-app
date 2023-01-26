@@ -33,7 +33,7 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
 
     
     return (
-        <Card className='box-shadow'>
+        <Card className='card-style'>
             {/* <Image src={image} wrapped ui={true} /> */}
             <div className="rounded-top" style={{
                 height: 240,
