@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Form from 'react-bootstrap/Form';
 
-function FilterType({ filterParam, setFilterParam }) {
+function FilterType({ filterParam, setFilterParam, filter_items }) {
     
     return (
         <Fragment>   
@@ -16,8 +16,11 @@ function FilterType({ filterParam, setFilterParam }) {
                     console.log(e.target.value);
                 }}
             >
-                <option value="All">Filter by Type of Event</option>
-                <option value="Sherehe">Sherehe</option>
+                <option value="">Filter by Type of Event</option>
+                {filter_items.map((item) => (
+                        <option value={item}>{item}</option>
+                ))}
+                {/* <option value="Sherehe">Sherehe</option>
                 <option value="Food">Food</option>
                 <option value="Wedding">Wedding</option>
                 <option value="Romance">Romance</option>
@@ -25,7 +28,7 @@ function FilterType({ filterParam, setFilterParam }) {
                 <option value="Fashion">Fashion</option>
                 <option value="Religious">Religious</option>
                 <option value="Art">Art</option>
-                <option value="Sports">Sports</option>
+                <option value="Sports">Sports</option> */}
                 
             </Form.Select>
         </Fragment>

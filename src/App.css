@@ -59,19 +59,20 @@
   transition: 0.5s;
 }
 
-/* .topbtn {
-  position: fixed;
-    bottom: 800px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    background-color:#2185d0;
-    border-radius: 50%;
-    background-size: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    z-index: 100000;
-    opacity: 0;
-    transition: 0.5s;
-} */
+.ui .row .card-style .rounded-top:hover {
+  transform: scale(1.07);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.ui .row .card-style {
+  position: relative;
+  /* box-shadow: 1px 2px 4px rgba(0, 0, 0, .5); */
+  padding: 10px;
+  background: white;
+  box-shadow: 3px 3px 6px rgb(204, 186, 186) !important;
+}
+
+
+
+

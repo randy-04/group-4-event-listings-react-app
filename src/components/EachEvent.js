@@ -1,4 +1,6 @@
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
+import { Card, Icon, Image, Button } from 'semantic-ui-react';
+
 
 function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
     // destructuring the event prop for easier access
@@ -33,15 +35,17 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
 
     
     return (
-        <Card>
+        <Card className='card-style'>
             {/* <Image src={image} wrapped ui={true} /> */}
-            <div className="rounded-top" style={{
+            <Link to={`attendance/${id}`} className="rounded-top" style={{
                 height: 240,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundImage: `url(${image})`
-            }}></div>
+            }}
+            
+            ></Link>
             <Card.Content>
             <Card.Header>{name}</Card.Header>
             <Card.Meta>{location}</Card.Meta>
