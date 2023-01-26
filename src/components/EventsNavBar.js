@@ -7,8 +7,8 @@ function EventsNavBar() {
         <Fragment>
         {/* className="flex-column"  */}
         <Nav defaultActiveKey="/" variant="pills"> 
-          <Nav.Link href="/">EventsHub</Nav.Link>
-          <Nav.Link eventKey="link-1" href="/eventsavailable">Events Page</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link eventKey="link-1" href="/eventsavailable">View Events</Nav.Link>
           <Nav.Link eventKey="link-2" href="/addevent">Add Event</Nav.Link>
           
         </Nav>
