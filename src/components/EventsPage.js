@@ -9,7 +9,7 @@ import { SearchResult } from "semantic-ui-react";
 import SearchResults from "./SearchResults";
 import FilterType from "./FilterType";
 import RSVPFilter from "./RSVPFilter";
-
+import { Button } from 'semantic-ui-react'
 
 
 function EventsPage() {
@@ -97,11 +97,17 @@ function EventsPage() {
             setEvents(updatedEvents);
         }
 
+        // function to delete event and update state accordingly
+        const deleteEvent = (delEv) => {
+            const updatedState = events.filter((event) => event.id !== delEv.id);
+            setEvents(updatedState);
+        }
+
         let evData = Object.values(events);
         // variable to loop through the searched/non-searched events and list them
         oneEvent = search(evData).map((event) => {
             return (
-                <EachEvent key={event.id} event={event} onUpdateEvent={updateAttend}/>
+                <EachEvent key={event.id} event={event} onUpdateEvent={updateAttend} onDeleteEvent={deleteEvent}/>
             )
         })
     
@@ -111,6 +117,11 @@ function EventsPage() {
             console.log(newEvent)
             setEvents([...events, newEvent])
         }
+
+        // function to handle scroll to top button 
+        const top = () => {
+            window.scrollTo(0, 0);
+          }
 
     return (
         <Fragment>
@@ -144,6 +155,8 @@ function EventsPage() {
                                 {oneEvent}
                             </div>
                         </div>
+                        {/*Back to top button */}
+                            <Button circular icon="arrow alternate circle up outline" onClick={top} className="topbtn" style={{color:"red"}}/>
                     </Fragment> } />
                 <Route path="/addevent" element={<AddEvent onAdd={handleAddEvent}/>} />
 

@@ -5,9 +5,10 @@ import React from 'react'
 
 
 function App() {
+    
   return (
     <div>
-      <EventsPage />
+      <EventsPage />         
     </div>
   );
 }
