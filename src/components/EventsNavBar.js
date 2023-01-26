@@ -6,12 +6,15 @@ function EventsNavBar() {
     return (
         <Fragment>
         {/* className="flex-column"  */}
-        <Nav defaultActiveKey="/" variant="pills"> 
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link eventKey="link-1" href="/eventsavailable">View Events</Nav.Link>
-          <Nav.Link eventKey="link-2" href="/addevent">Add Event</Nav.Link>
+        <ul>
+        <Nav  className="nav" style={{ width: "100%", position: "absolute", marginTop: "5%", marginLeft: "65%", fontSize: "25px", color: "whitesmoke"}}> 
+        <li style={{marginRight: "10px"}}><Nav.Link style ={{color: "whitesmoke"}} href="/">Home</Nav.Link></li>
+         <li style={{marginRight: "10px"}}><Nav.Link style ={{color: "whitesmoke"}}eventKey="link-0" href="/contact">Contact us</Nav.Link></li>
+         <li style={{marginRight: "10px"}}><Nav.Link style ={{color: "whitesmoke"}}eventKey="link-1" href="/eventsavailable">View Events</Nav.Link></li>
+         <li style={{marginRight: "10px"}}><Nav.Link style ={{color: "whitesmoke"}}eventKey="link-2" href="/addevent">Add Event</Nav.Link></li>
           
         </Nav>
+        </ul>
         </Fragment>
       );
 }
