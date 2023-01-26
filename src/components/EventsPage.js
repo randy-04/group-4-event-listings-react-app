@@ -1,7 +1,7 @@
 import EventsNavBar from "./EventsNavBar";
 import React, { useState, useEffect, Fragment } from 'react';
 import { Alert } from "react-bootstrap";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Outlet } from "react-router-dom";
 import Home from "./Home";
 import AddEvent from "./AddEvent";
 import EachEvent from "./EachEvent";
@@ -10,7 +10,7 @@ import SearchResults from "./SearchResults";
 import FilterType from "./FilterType";
 import RSVPFilter from "./RSVPFilter";
 import { Button } from 'semantic-ui-react';
-import SortDate from "./SortDate";
+import EventInfo from "./EventInfo";
 
 
 function EventsPage() {
@@ -129,8 +129,8 @@ function EventsPage() {
                 const timeA = (new Date(a.date)).getTime()
                 const timeB = (new Date(b.date)).getTime()
 
-                if(timeA > timeB) return -1;
-                else if(timeA < timeB) return 1;
+                if(timeA < timeB) return -1;
+                else if(timeA > timeB) return 1;
                 else return 0;
             })
 
@@ -176,13 +176,16 @@ function EventsPage() {
                         }}>
                             {/* components handling search and filters */}
                         <SearchResults searchResults={searchResults} setSearchResults={setSearchResults} />
-                        <button onClick={sortEvents}>
+                        <button onClick={sortEvents} className="sort-btn">
                             Sort by Date
                         </button>
                         {/* <SortDate events={events} setEvents={setEvents} strategy={updateSortStrategy} sortStrategy={sortStrategy} /> */}
                         <FilterType filterParam={filter} setFilterParam={setFilter} filter_items={filter_items}/>
                     </div>
                     <br />
+                    <div style={{position:"relative"}}>
+                    <Outlet />
+                    </div>
                         <div className="ui three column grid container" style={{
                             
                             display: 'flex',
@@ -196,7 +199,11 @@ function EventsPage() {
                         </div>
                         {/*Back to top button */}
                             <Button circular icon="arrow alternate circle up outline" onClick={top} className="topbtn" style={{color:"red"}}/>
-                    </Fragment> } />
+                    </Fragment> }>
+
+                        <Route path="attendance/:eventID" element={<EventInfo />} />
+
+                </Route>
                 <Route path="/addevent" element={<AddEvent onAdd={handleAddEvent}/>} />
 
             </Routes>
