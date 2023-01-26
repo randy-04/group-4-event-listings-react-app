@@ -1,37 +1,62 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 .banner{
     position: relative;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 .image{
     width: 100%;
-    height: 30%;
+    height: 100%;
+    display: flex;
+    /* background-size: cover ; */
 }
 .box{
-    margin-left: 50%;
+    margin-left: 30%;
 }
 
 h1:last-child{
-    margin-right: 50%;
+    
 }
 
 .heading{
-    color: tomato;
-    display: flex;
+    color: rgb(241, 199, 8);
+    /* display: flex; */
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 10%;
-    width: 35%;
-    height: 80vh;
+    font-size: 50px;
+    top: 15%;
+    width: 45%;
+    
+    text-align: center;
+    
+}
+
+.cont2{
+    display: block;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    width: 60%;
+    height: 120%;
     text-align: center;
     background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    /* color: brown;
+    background-color: yellow;
+    display: block;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    border-radius: 30px;
+    height: 300px;
+    width: 500px; */
 }
+
 
 /* .header{
     margin-bottom: 2px;
