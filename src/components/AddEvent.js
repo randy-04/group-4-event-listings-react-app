@@ -77,23 +77,24 @@ function AddEvent({onAdd}) {
             <div className={AddEventStyle.textwrap}>
             <div class="row">
                 <div class="col-sm">
-                <form  className={AddEventStyle.form} onSubmit={addEvent}> </form>
-              
-                <br/>
+
+                <Form  className={AddEventStyle.form} onSubmit={addEvent}>
+                    
                 <div class="col-sm">
                 <label className={AddEventStyle.label}>
                     Event Name:
-                    <input onChange={(e)=> handleChange(e)} className="form-control " 
+                    <input onChange={(e)=> handleChange(e)} className={AddEventStyle.form1} 
                     type="text" name="name" value={eventData.name} placeholder="name" />
                 </label> <br />
                 </div>
+                </Form>
                
                 </div>
 
                 <div class="col-sm">
                 <label>
                     Image:
-                    <input onChange={(e)=> handleChange(e)}  className="form-control" 
+                    <input onChange={(e)=> handleChange(e)}  className={AddEventStyle.form1} 
                     type="text" name="image" value={eventData.image} placeholder="image" />
                 </label> <br /></div>
             </div>
@@ -103,14 +104,14 @@ function AddEvent({onAdd}) {
                 <div class="col-sm">
                 <label>
                     Location:                
-                    <input onChange={(e)=> handleChange(e)}  className="form-control" 
+                    <input onChange={(e)=> handleChange(e)}  className={AddEventStyle.form1} 
                     type="text" name="location" value={eventData.location} placeholder="location" /> 
                 </label> <br /></div>
 
                 <div class="col">
                 <label>
                     Date:
-                    <input onChange={(e)=> handleChange(e)}   className="form-control" 
+                    <input onChange={(e)=> handleChange(e)}   className={AddEventStyle.form1}  
                     type="date" name="date" value={eventData.date} placeholder="dd-mm-yyyy" /> 
                 </label> <br /></div>
                 </div>
@@ -119,14 +120,14 @@ function AddEvent({onAdd}) {
                     <div class="col-sm">
                     <label>
                     Time:
-                    <input onChange={(e)=> handleChange(e)} className="form-control" 
+                    <input onChange={(e)=> handleChange(e)} className={AddEventStyle.form1}  
                     type="time" name="time" value={eventData.time} /> 
                 </label> <br /></div>
 
             <div class="col">
                 <label>
                     Price:
-                    <input onChange={(e)=> handleChange(e)} className="form-control" 
+                    <input onChange={(e)=> handleChange(e)} className={AddEventStyle.form1}  
                     type="text" name="price" value={eventData.price} placeholder="price" /> 
                 </label> <br /></div>
                  </div>
@@ -140,6 +141,7 @@ function AddEvent({onAdd}) {
                 </label> <br />
                      </div>
 
+                    
                     <div class="col">
                     <label>
                     Type of Event:
@@ -166,13 +168,21 @@ function AddEvent({onAdd}) {
                     </Form.Select>
                 </label> <br />
                 <br /></div>      
+
+                    
             </div>
+            
+            <div className="row">
+                    <div class="col-sm">
+                    <button type="submit" className={AddEventStyle.btn}>Add Event</button>
+               <br /></div>
+                 </div>
+                 
 
             </div>
          
             </div>
 
-            <button type="submit" className="btn btn-primary">Add Event</button>
 
            </div>
            
