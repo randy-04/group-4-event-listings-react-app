@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Form from 'react-bootstrap/Form';
 
-function FilterType({ filterParam, setFilterParam, filter_items }) {
+function FilterType({ filterParam, setFilterParam }) {
     
     return (
         <Fragment>   

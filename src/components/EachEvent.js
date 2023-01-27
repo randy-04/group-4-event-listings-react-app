@@ -7,7 +7,7 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
     const {id, name, image, location, date, time, price, willAttend, description} = event;
 
     function handleDelete() {
-      fetch(`http://localhost:3000/Events/${id}`, {
+      fetch(`https://events-moringa-api.herokuapp.com/Events/${id}`, {
         method: 'DELETE',
       })
       .then((r)=>r.json())
@@ -20,7 +20,7 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
 
       // function to handle update of willAttend
       function updateAttend() {
-        fetch(`http://localhost:3000/Events/${id}`, {
+        fetch(`https://events-moringa-api.herokuapp.com/Events/${id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'

@@ -60,7 +60,7 @@ function AddEvent({onAdd}) {
             willAttend: false
         }
         
-        fetch(" http://localhost:3000/Events",{
+        fetch("https://events-moringa-api.herokuapp.com/Events",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

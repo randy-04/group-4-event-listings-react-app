@@ -12,7 +12,7 @@ function EventInfo() {
 
     // useEffect to fetch and store data in eventData
     useEffect(() => {
-        fetch(`http://localhost:3000/Events/${params.eventID}`)
+        fetch(`https://events-moringa-api.herokuapp.com/Events/${params.eventID}`)
         .then((r)=>r.json())
         .then((evData)=>setEventData(evData))
     }, [params.eventID])
