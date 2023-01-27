@@ -21,7 +21,9 @@ function EventInfo() {
         <div style={{
             display: 'flex',
             justifyContent: 'space-between', 
-            alignItems: 'center'
+            alignItems: 'center',
+            backgroundColor: "#2185d0",
+            color: "white"
         }}>
             {/* <Card className="bg-dark text-white">
             <Card.Img src={eventData.image} alt="Card image" />
@@ -36,19 +38,23 @@ function EventInfo() {
             </Card.ImgOverlay>
             </Card> */}
 
-            <Card >
+            <Card style={{
+                // color:"black",
+                // backgroundColor:"whitesmoke"
+            }}>
                 <Card.Content header={eventData.name} />
                 <Card.Content description={eventData.description} />
                 <Card.Content extra>
-                Price: {eventData.price}
-                Location: {eventData.location}
+                Price: {eventData.price} || Location: {eventData.location}
+
+                <br />
                 <Icon name='meetup' />
                     Date & Time: {eventData.date} || {eventData.time}
                 </Card.Content>
             </Card>
 
             <h2 class="ui icon header">
-            <i class="meetup"></i>
+            <Icon name="mail" />
             <div class="content">
                 Attending? {eventData.willAttend ? "I AM": "No"}
                 <div class="sub header">Toggle the RSVP/Attend button to confirm attendance</div>

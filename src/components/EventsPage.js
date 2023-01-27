@@ -167,7 +167,7 @@ function EventsPage() {
                 <Route path="/" element={<Home />} />
                 <Route path="/eventsavailable" element={<Fragment>
                     <Alert variant="dark">
-                        Welcome to EventHub! Use the filter and search to find the Event for You 🥳
+                        Welcome to EventHub! Use the filter and search to find the Event for You 😎
                     </Alert>
                     <div className="wrapper" style={{
                         display: "flex",
@@ -204,8 +204,9 @@ function EventsPage() {
                         <Route path="attendance/:eventID" element={<EventInfo />} />
 
                 </Route>
-                <Route path="/addevent" element={<AddEvent onAdd={handleAddEvent}/>} />
-
+                
+                <Route path="/addevent" element={<div className="add-ev-div"><AddEvent onAdd={handleAddEvent}/> </div>} />
+                
             </Routes>
             
         </Fragment>

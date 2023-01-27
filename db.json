@@ -34,7 +34,7 @@
       "price": "$30",
       "date": "2023-9-8",
       "time": "11:30am",
-      "willAttend": true
+      "willAttend": false
     },
     {
       "id": 4,
@@ -46,7 +46,7 @@
       "price": "$25",
       "date": "2023-7-13",
       "time": "8:15pm",
-      "willAttend": false
+      "willAttend": true
     },
     {
       "id": 5,
@@ -58,7 +58,7 @@
       "price": "$30",
       "date": "2023-4-30",
       "time": "9:45pm",
-      "willAttend": true
+      "willAttend": false
     },
     {
       "id": 6,

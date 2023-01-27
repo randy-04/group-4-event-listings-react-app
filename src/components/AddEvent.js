@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import Form from 'react-bootstrap/Form';
+// import { Form } from 'semantic-ui-react';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 
 
 const heading = {
@@ -70,89 +75,108 @@ function AddEvent({onAdd}) {
   
     return (
         
-         <div>
-          {/* <img src="./images/plant.jpg" alt=""  style={{ width: '100%', height: '200%' }}  /> */}
-            <h1 style={heading}>Add Event</h1>
-            <div>
-         <form  className="col-sm-6 offset-sm-3" onSubmit={addEvent}>
-            <div className="col-sm-6 offset-sm-3">
-                <br/>
-                <label>
-                    Event Name:
-                    <input onChange={(e)=> handleChange(e)} className="form-control " 
-                    type="text" name="name" value={eventData.name} placeholder="name" />
-                </label> <br />
-                
-                <label>
-                    Image:
-                    <input onChange={(e)=> handleChange(e)}  className="form-control" 
-                    type="text" name="image" value={eventData.image} placeholder="image" />
-                </label> <br />
+         
+       <div>
 
-                <label>
-                    Location:                
-                    <input onChange={(e)=> handleChange(e)}  className="form-control" 
-                    type="text" name="location" value={eventData.location} placeholder="location" /> 
-                </label> <br />
-
-                <label>
-                    Date:
-                    <input onChange={(e)=> handleChange(e)}   className="form-control" 
-                    type="date" name="date" value={eventData.date} placeholder="dd-mm-yyyy" /> 
-                </label> <br />
-                
-                <label>
-                    Time:
-                    <input onChange={(e)=> handleChange(e)} className="form-control" 
-                    type="time" name="time" value={eventData.time} /> 
-                </label> <br />
-
-                <label>
-                    Price:
-                    <input onChange={(e)=> handleChange(e)} className="form-control" 
-                    type="text" name="price" value={eventData.price} placeholder="price" /> 
-                </label> <br />
-               
-                <label>
-                    Description:
-                    <textarea onChange={(e)=> handleChange(e)} className="form-control w-1/2 p-1" 
-                    type="text" name="description" value={eventData.description} placeholder="description" /> 
-                </label> <br />
-
-                <label>
-                    Type of Event:
-                    <Form.Select 
-                        style={{width: "100%"}}
-                        name="type"
-                        value={eventData.type}
-                        
-                        aria-label="Default select example"
-                        
-                        onChange={(e) => {handleChange(e)}}
-                    >
-                        {/* <option value="All">Filter by Type of Event</option> */}
-                        <option value="Sherehe">Sherehe</option>
-                        <option value="Food">Food</option>
-                        <option value="Wedding">Wedding</option>
-                        <option value="Romance">Romance</option>
-                        <option value="Education">Education</option>
-                        <option value="Fashion">Fashion</option>
-                        <option value="Religious">Religious</option>
-                        <option value="Art">Art</option>
-                        <option value="Sports">Sports</option>
-                        
-                    </Form.Select>
-                </label> <br />
-                <br />
-                
-               
-                <button type="submit" className="btn btn-primary">Add Event</button>
-            </div>
-        </form>  
-            </div> 
-        </div>
-       
+        {/* <Form onSubmit={addEvent}>
+        <Form.Group widths='equal'>
+          <Form.Input fluid label='Event name' type="text" name="name" value={eventData.name} placeholder="name" onChange={(e)=> handleChange(e)} />
+          <Form.Input fluid label='Image' type="text" name="image" value={eventData.image} placeholder="image" onChange={(e)=> handleChange(e)}/>
+          <Form.Select
+            fluid
+            label='Type'
+            
+            placeholder='Type'
+            name="type"
+            value={eventData.type}
+                                    
+            onChange={(e) => {handleChange(e)}}
+          />
+          <option value="Sherehe">Sherehe</option>
+            <option value="Food">Food</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Romance">Romance</option>
+            <option value="Education">Education</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Religious">Religious</option>
+            <option value="Art">Art</option>
+            <option value="Sports">Sports</option>
+        </Form.Group>
+        <Form.Group inline>
+            <Form.Input fluid label='Location' type="text"name="location" value={eventData.location} placeholder="Location" onChange={(e)=> handleChange(e)} />
+            <Form.Input fluid label='Price' type="text" name="price" value={eventData.price} placeholder="Price" onChange={(e)=> handleChange(e)}/>
+            <Form.Input fluid label='Date' type="date" name="date" value={eventData.date} placeholder="yyyy-mm-dd" onChange={(e)=> handleChange(e)}/>
+            <Form.Input fluid label='Time' type="time" name="time" value={eventData.time} placeholder="Time" onChange={(e)=> handleChange(e)}/>
+        </Form.Group>
+        <Form.TextArea label='Description' placeholder='Description...' onChange={(e)=> handleChange(e)} type="text" name="description" value={eventData.description} />
         
+        <Form.Button type="submit">Submit</Form.Button>
+      </Form> */}
+
+    <Form onSubmit={addEvent} className="form-add">
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Label>Event Name</Form.Label>
+          <Form.Control type="text" name="name" placeholder="Event Name" value={eventData.name} onChange={(e)=> handleChange(e)}/>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Label>Image</Form.Label>
+          <Form.Control type="text" name="image" placeholder="Image" value={eventData.image} onChange={(e)=> handleChange(e)}/>
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" controlId="formGridAddress1">
+        <Form.Label>Location</Form.Label>
+        <Form.Control type="location" name="location" placeholder="Location" value={eventData.location} onChange={(e)=> handleChange(e)}/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formGridAddress2">
+        <Form.Label>Description</Form.Label>
+        <Form.Control as="textarea" style={{height:"100px"}}name="description" placeholder="Description..." value={eventData.description} onChange={(e)=> handleChange(e)}/>
+      </Form.Group>
+
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridCity">
+          <Form.Label>Date</Form.Label>
+          <Form.Control type="date" name="date" placeholder="yyyy-mm-dd" value={eventData.date} onChange={(e)=> handleChange(e)}/>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridState">
+          <Form.Label>Type of Event</Form.Label>
+          <Form.Select defaultValue="Choose..." 
+            name="type"
+            value={eventData.type}                                    
+            onChange={(e) => {handleChange(e)}}>
+
+            <option>Choose...</option>
+            <option value="Sherehe">Sherehe</option>
+            <option value="Food">Food</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Romance">Romance</option>
+            <option value="Education">Education</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Religious">Religious</option>
+            <option value="Art">Art</option>
+            <option value="Sports">Sports</option>
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Time</Form.Label>
+          <Form.Control type="time" name="time" placeholder="time" value={eventData.time} onChange={(e)=> handleChange(e)}/>
+        </Form.Group>
+      </Row>
+
+      
+
+      <Button variant="primary" type="submit">
+        Add Event
+      </Button>
+    </Form>
+    </div>
+
+      
     )
     
 }
