@@ -5,28 +5,8 @@ FindEvent Hub is an application created to show listings of events.
 ## Description
 This app will allow users to browse through a list of events nearby,view the details of the event, RSVP to an event of their choice as well as add new events to the list.
 
-## Setup Instructions
-- Clone this repository into your local machine. The URL is https://github.com/randy-04/group-4-event-listings-react-app.
-- Paste this code into your terminal to clone the repo:
-```bash
-git@github.com:randy-04/group-4-event-listings-react-app.git
-```
-- Install npm on the folder you've stored this repository in.
-```bash
-  npm install 
-```
-- Test your server by opening this link:
-- http://localhost:3000/Events
-
-- Start the application by running the following command on your terminal:
-```bash
-  npm run server 
-```
-- That gets the server up and running. Open another terminal tab and input:
-```bash
-  npm start 
-```
-- Your browser should open up automatically. If not, click the link you will be provided.
+## Access Instructions
+- The website is deployed on Vercel. Anyone can access it through this link: https://group-4-event-listings-react-app-pkqg.vercel.app/.
 
 
 ## User Journey
