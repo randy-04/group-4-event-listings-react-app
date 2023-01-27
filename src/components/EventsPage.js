@@ -22,10 +22,10 @@ function EventsPage() {
     const [searchResults, setSearchResults] = useState("");
 
     // state to hold search parameters for each event
-    // const [searchParam] = useState(["description", "name", "date", "price", "location", "time"]);
+    const [searchParam] = useState(["description", "name", "date", "price", "location", "time"]);
 
     // useState for filter parameters
-    const [filter, setFilter] = useState("");
+    const [filterParam, setFilterParam] = useState(["All"]);
 
     // useState for willAttend filter parameter
     const [attendFilter, setAttendFilter] = useState(["All"]);
@@ -62,21 +62,38 @@ function EventsPage() {
     // when there is an event, it will be filtered to find a match from the search results based on the name event
     let oneEvent= "";
  
-    const data = Object.values(events);
+    //const data = Object.values(events);
     
-    const search_parameters = Object.keys(Object.assign({}, ...data));
-    const filter_items = [...new Set(data.map((event) => event.type))];
+    // const search_parameters = Object.keys(Object.assign({}, ...data));
+    // const filter_items = [...new Set(data.map((event) => event.type))];
     
     // function to handle both search results and filtered results
     function search(events) {
-        return events.filter(
-            (event) =>
-                event.type.includes(filter) &&
-                search_parameters.some((parameter) =>
-                    event[parameter].toString().toLowerCase().includes(searchResults)
-                )
-        );
-    }
+        return events.filter((event) => {
+            // filter by type
+            if (event.type === filterParam) { 
+                // default search based on parameters
+                return searchParam.some((newEvent) => {
+                    return (
+                        event[newEvent]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(searchResults.toLowerCase()) > -1
+                    );
+                });
+            } else if (filterParam == "All") {
+                return searchParam.some((newEvent) => {
+                    return (
+                        event[newEvent]
+                            .toString()
+                            .toLowerCase()
+                            .indexOf(searchResults.toLowerCase()) > -1
+                    );
+                });
+
+            }
+        }
+    )}
 
     const load_more = (event) => {
         setPaginate((prevValue) => prevValue + 8);
@@ -98,9 +115,9 @@ function EventsPage() {
             setEvents(updatedState);
         }
 
-        // let evData = Object.values(events);
+        let evData = Object.values(events);
         // variable to loop through the searched/non-searched events and list them
-        oneEvent = search(data)
+        oneEvent = search(evData)
             .slice(0, paginate).map((event) => {
                 return (
                     <EachEvent key={event.id} event={event} onUpdateEvent={updateAttend} onDeleteEvent={deleteEvent}/>
@@ -179,8 +196,8 @@ function EventsPage() {
                         <button onClick={sortEvents} className="sort-btn">
                             Sort by Date
                         </button>
-                        {/* <SortDate events={events} setEvents={setEvents} strategy={updateSortStrategy} sortStrategy={sortStrategy} /> */}
-                        <FilterType filterParam={filter} setFilterParam={setFilter} filter_items={filter_items}/>
+                        
+                        <FilterType filterParam={filterParam} setFilterParam={setFilterParam} />
                     </div>
                     <br />
                     <div style={{position:"relative"}}>

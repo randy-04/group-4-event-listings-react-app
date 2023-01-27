@@ -17,10 +17,10 @@ function FilterType({ filterParam, setFilterParam, filter_items }) {
                 }}
             >
                 <option value="">Filter by Type of Event</option>
-                {filter_items.map((item) => (
+                {/* {filter_items.map((item) => (
                         <option value={item}>{item}</option>
-                ))}
-                {/* <option value="Sherehe">Sherehe</option>
+                ))} */}
+                <option value="Sherehe">Sherehe</option>
                 <option value="Food">Food</option>
                 <option value="Wedding">Wedding</option>
                 <option value="Romance">Romance</option>
@@ -28,7 +28,7 @@ function FilterType({ filterParam, setFilterParam, filter_items }) {
                 <option value="Fashion">Fashion</option>
                 <option value="Religious">Religious</option>
                 <option value="Art">Art</option>
-                <option value="Sports">Sports</option> */}
+                <option value="Sports">Sports</option>
                 
             </Form.Select>
         </Fragment>
