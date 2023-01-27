@@ -53,10 +53,12 @@ function EventsPage() {
 
     // useEffect to fetch events from the server
     useEffect(() => {
-        fetch("http://localhost:3000/Events")
+        fetch("https://events-moringa-api.herokuapp.com/Events")
         .then((response) => response.json())
         // using async method to add events
-        .then((eventsData) => setEvents(() => eventsData));
+        .then((eventsData) => {
+            console.log(eventsData) 
+            return setEvents(() => eventsData)})
     }, [])
 
     // when there is an event, it will be filtered to find a match from the search results based on the name event
