@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Card, Icon, Image, Button } from 'semantic-ui-react';
+import API_BASE_URL from '../library/env';
 
 
 function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
@@ -7,7 +8,7 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
     const {id, name, image, location, date, time, price, willAttend, description} = event;
 
     function handleDelete() {
-      fetch(`https://events-moringa-api.herokuapp.com/Events/${id}`, {
+      fetch(`${API_BASE_URL}/${id}`, {
         method: 'DELETE',
       })
       .then((r)=>r.json())
@@ -20,7 +21,7 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
 
       // function to handle update of willAttend
       function updateAttend() {
-        fetch(`https://events-moringa-api.herokuapp.com/Events/${id}`, {
+        fetch(`${API_BASE_URL}/${id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'

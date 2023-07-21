@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import API_BASE_URL from "../library/env";
 
 
 const heading = {
@@ -60,7 +61,7 @@ function AddEvent({onAdd}) {
             willAttend: false
         }
         
-        fetch("https://events-moringa-api.herokuapp.com/Events",{
+        fetch(`${API_BASE_URL}`,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

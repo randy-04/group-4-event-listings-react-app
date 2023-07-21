@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 // import Card from 'react-bootstrap/Card';
-import { Card, Icon } from 'semantic-ui-react'
+import { Card, Icon } from 'semantic-ui-react';
+import API_BASE_URL from "../library/env";
 
 
 function EventInfo() {
@@ -12,7 +13,7 @@ function EventInfo() {
 
     // useEffect to fetch and store data in eventData
     useEffect(() => {
-        fetch(`https://events-moringa-api.herokuapp.com/Events/${params.eventID}`)
+        fetch(`${API_BASE_URL}/${params.eventID}`)
         .then((r)=>r.json())
         .then((evData)=>setEventData(evData))
     }, [params.eventID])
