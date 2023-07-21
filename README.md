@@ -31,7 +31,7 @@ This app will allow users to browse through a list of events nearby,view the det
 ## Authors
 - [@Samuel Kuria](https://github.com/samuelkuria01)
 - [@Sophia Ndalo](https://github.com/sophie-ndalo)
-- [@Randy Kipkurui](https://github.com/randy-04)
+- [@Randy Kipkurui](https://github.com/randy-kip)
 
 
 
@@ -39,5 +39,4 @@ This app will allow users to browse through a list of events nearby,view the det
 
 [MIT](https://github.com/randy-04/group-4-event-listings-react-app/blob/main/LICENSE.md)
 
-## License
 
