@@ -11,6 +11,7 @@ import FilterType from "./FilterType";
 import RSVPFilter from "./RSVPFilter";
 import { Button } from 'semantic-ui-react';
 import EventInfo from "./EventInfo";
+import API_BASE_URL from "../library/env";
 
 
 function EventsPage() {
@@ -53,7 +54,7 @@ function EventsPage() {
 
     // useEffect to fetch events from the server
     useEffect(() => {
-        fetch("https://events-moringa-api.herokuapp.com/Events")
+        fetch(`${API_BASE_URL}`)
         .then((response) => response.json())
         // using async method to add events
         .then((eventsData) => {
