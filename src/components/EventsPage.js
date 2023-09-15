@@ -15,9 +15,6 @@ import API_BASE_URL from "../library/env";
 import ReactGA from "react-ga";
 
 function EventsPage() {
-  // Integrate Google Analytics
-  const TRACKING_ID = "G-4DC5MJHGSF";
-  ReactGA.initialize(TRACKING_ID);
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
