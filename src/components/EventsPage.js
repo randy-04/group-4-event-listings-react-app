@@ -16,7 +16,7 @@ import ReactGA from "react-ga";
 
 function EventsPage() {
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   // create state for holding the events
