@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
 import { Card, Icon, Image, Button } from "semantic-ui-react";
 import API_BASE_URL from "../library/env";
-import ReactGA from "react-ga";
 
 function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
-  // Google Analytics page view trigger
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
-
   // destructuring the event prop for easier access
   const {
     id,
@@ -21,16 +15,6 @@ function EachEvent({ event, onUpdateEvent, onDeleteEvent }) {
     willAttend,
     description,
   } = event;
-
-  // Google Analytics Event Creation
-  const eventAnalytics = () => {
-    ReactGA.event({
-      category: event.name,
-      action: "test action",
-      label: "test label",
-      value: event.willAttend,
-    });
-  };
 
   function handleDelete() {
     fetch(`${API_BASE_URL}/${id}`, {

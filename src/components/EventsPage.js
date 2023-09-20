@@ -12,10 +12,6 @@ import RSVPFilter from "./RSVPFilter";
 import { Button } from "semantic-ui-react";
 import EventInfo from "./EventInfo";
 import API_BASE_URL from "../library/env";
-import ReactGA from "react-ga";
-
-const TRACKING_ID = "G-4DC5MJHGSF";
-ReactGA.initialize(TRACKING_ID);
 
 function EventsPage() {
   // create state for holding the events
