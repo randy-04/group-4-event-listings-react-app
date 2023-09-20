@@ -14,11 +14,10 @@ import EventInfo from "./EventInfo";
 import API_BASE_URL from "../library/env";
 import ReactGA from "react-ga";
 
-function EventsPage() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+const TRACKING_ID = "G-4DC5MJHGSF";
+ReactGA.initialize(TRACKING_ID);
 
+function EventsPage() {
   // create state for holding the events
   const [events, setEvents] = useState([]);
 
